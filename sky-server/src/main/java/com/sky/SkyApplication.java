@@ -5,6 +5,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 
 @SpringBootApplication
 @EnableTransactionManagement //开启注解方式的事务管理
