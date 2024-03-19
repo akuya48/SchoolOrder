@@ -4,9 +4,13 @@ import com.github.pagehelper.Page;
 import com.sky.dto.CategoryPageQueryDTO;
 import com.sky.entity.Category;
 import com.sky.entity.Employee;
+import io.swagger.models.auth.In;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
+
+import java.util.List;
 
 @Mapper
 public interface CategoryMapper {
@@ -33,4 +37,10 @@ public interface CategoryMapper {
      * @param category
      */
     void update(Category category);
+
+    @Delete("delete from category where id = #{id}")
+    void delete(Long id);
+
+    @Select("select * from category where type = #{type}")
+    List<Category> getByType(Integer type);
 }
