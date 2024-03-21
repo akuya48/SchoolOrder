@@ -11,3 +11,7 @@ sky:
     access-key-id: LTAI5t7NSpFqgdeUZ9SeEMwg
     access-key-secret: XyZBaCsc6D3IipY3OwXvMFDytbYaf8
     bucket-name: sky-take-out-akuya48
+  redis:
+    host: localhost
+    port: 6379
+    database: 10 # 默认有0-15共16个数据库，设定使用Redis的指定数据库
